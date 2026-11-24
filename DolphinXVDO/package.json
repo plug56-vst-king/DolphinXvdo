@@ -1,0 +1,11 @@
+{
+  "name": "dolphin-xvdo",
+  "version": "2.3.0",
+  "description": "DolphinXVDO - Audio Processing Object with Embedded ReaComp & EQ",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "DolphinXVDO",
+  "license": "ISC"
+}

@@ -1,0 +1,347 @@
+/* ==========================================================================
+   DolphinXVDO Dark Tech Presentation Theme for Device Selector
+   Color Palette:
+     - Main Background: #000000
+     - Card / Panel Background: #0A0A0A
+     - Alternate Row Background: #121212
+     - Subtle Borders: rgba(255, 255, 255, 0.145) / #252525
+     - Accent Blue: #52A8FF
+     - Success Green: #62C073
+     - Text Primary: #EDEDED
+     - Text Muted: #999999
+   ========================================================================== */
+
+/* Main Window Dialog */
+QDialog#DeviceSelectorClass {
+    background-color: #000000;
+    color: #EDEDED;
+    font-family: "Inter", "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+    font-size: 13px;
+}
+
+/* Top Description Label */
+QLabel#requestLabel {
+    color: #999999;
+    font-size: 13px;
+    font-weight: 500;
+    padding-bottom: 2px;
+}
+
+QLabel#label, QLabel#preMixLabel, QLabel#postMixLabel {
+    color: #EDEDED;
+    font-size: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   Device Tree Widget
+   -------------------------------------------------------------------------- */
+QTreeWidget#deviceTreeWidget {
+    background-color: #0A0A0A;
+    alternate-background-color: #101010;
+    border: 1px solid #252525;
+    border-radius: 8px;
+    color: #EDEDED;
+    outline: none;
+    padding: 4px;
+    show-decoration-selected: 1;
+}
+
+/* Tree Rows */
+QTreeWidget#deviceTreeWidget::item {
+    height: 30px;
+    border-radius: 5px;
+    padding: 2px 4px;
+    margin: 1px 2px;
+    color: #EDEDED;
+}
+
+QTreeWidget#deviceTreeWidget::item:hover {
+    background-color: #191919;
+    color: #FFFFFF;
+}
+
+QTreeWidget#deviceTreeWidget::item:selected {
+    background-color: #122030;
+    color: #52A8FF;
+    border: 1px solid #52A8FF;
+}
+
+QTreeWidget#deviceTreeWidget::item:selected:hover {
+    background-color: #172A3E;
+    color: #FFFFFF;
+}
+
+/* Tree Column Headers */
+QHeaderView::section {
+    background-color: #0A0A0A;
+    color: #999999;
+    border: none;
+    border-bottom: 1px solid #252525;
+    padding: 6px 10px;
+    font-family: "Geist Mono", "Cascadia Mono", "Consolas", monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+QHeaderView::section:hover {
+    color: #52A8FF;
+    background-color: #121212;
+}
+
+/* Tree Branch Arrows */
+QTreeWidget#deviceTreeWidget::branch:has-children:!has-siblings:closed,
+QTreeWidget#deviceTreeWidget::branch:closed:has-children:has-siblings {
+    border-image: none;
+    image: url(icons/arrow-right.svg);
+}
+
+QTreeWidget#deviceTreeWidget::branch:open:has-children:!has-siblings,
+QTreeWidget#deviceTreeWidget::branch:open:has-children:has-siblings {
+    border-image: none;
+    image: url(icons/arrow-down.svg);
+}
+
+/* --------------------------------------------------------------------------
+   Modern Checkboxes (Tree Checkboxes & Standalone Checkboxes)
+   -------------------------------------------------------------------------- */
+QCheckBox {
+    color: #EDEDED;
+    spacing: 8px;
+    font-size: 12px;
+}
+
+QCheckBox:hover {
+    color: #FFFFFF;
+}
+
+QCheckBox::indicator,
+QTreeWidget::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 1.5px solid #333333;
+    background-color: #121212;
+}
+
+QCheckBox::indicator:hover,
+QTreeWidget::indicator:hover {
+    border-color: #52A8FF;
+    background-color: #1F1F1F;
+}
+
+QCheckBox::indicator:checked,
+QTreeWidget::indicator:checked {
+    background-color: #52A8FF;
+    border-color: #52A8FF;
+    image: url(icons/check.svg);
+}
+
+QCheckBox::indicator:checked:hover,
+QTreeWidget::indicator:checked:hover {
+    background-color: #6BB5FF;
+    border-color: #6BB5FF;
+}
+
+QCheckBox::indicator:indeterminate,
+QTreeWidget::indicator:indeterminate {
+    background-color: #52A8FF;
+    border-color: #52A8FF;
+    image: url(icons/check-part.svg);
+}
+
+/* --------------------------------------------------------------------------
+   Troubleshooting Group Box
+   -------------------------------------------------------------------------- */
+QGroupBox#troubleshootingGroupBox {
+    background-color: #0A0A0A;
+    border: 1px solid #252525;
+    border-radius: 8px;
+    margin-top: 14px;
+    padding: 14px 12px 10px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #999999;
+}
+
+QGroupBox#troubleshootingGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 12px;
+    padding: 0 6px;
+    background-color: #000000;
+    color: #999999;
+}
+
+QGroupBox#troubleshootingGroupBox::title:hover {
+    color: #52A8FF;
+}
+
+QGroupBox#troubleshootingGroupBox::indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    border: 1.5px solid #333333;
+    background-color: #121212;
+}
+
+QGroupBox#troubleshootingGroupBox::indicator:hover {
+    border-color: #52A8FF;
+}
+
+QGroupBox#troubleshootingGroupBox::indicator:checked {
+    background-color: #52A8FF;
+    border-color: #52A8FF;
+    image: url(icons/check.svg);
+}
+
+/* --------------------------------------------------------------------------
+   ComboBox
+   -------------------------------------------------------------------------- */
+QComboBox#installModeComboBox {
+    background-color: #121212;
+    border: 1px solid #252525;
+    border-radius: 6px;
+    padding: 4px 10px;
+    color: #EDEDED;
+    font-size: 12px;
+    min-height: 22px;
+}
+
+QComboBox#installModeComboBox:hover,
+QComboBox#installModeComboBox:focus {
+    border-color: #52A8FF;
+}
+
+QComboBox#installModeComboBox::drop-down {
+    border: none;
+    width: 22px;
+}
+
+QComboBox#installModeComboBox::down-arrow {
+    image: url(icons/arrow-down.svg);
+    width: 12px;
+    height: 12px;
+}
+
+QComboBox#installModeComboBox QAbstractItemView {
+    background-color: #0A0A0A;
+    border: 1px solid #252525;
+    border-radius: 6px;
+    color: #EDEDED;
+    selection-background-color: #1F1F1F;
+    selection-color: #52A8FF;
+    outline: none;
+    padding: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   Scrollbars (Minimalist Dark)
+   -------------------------------------------------------------------------- */
+QScrollBar:vertical {
+    background-color: transparent;
+    width: 8px;
+    margin: 2px 0;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #252525;
+    min-height: 26px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #52A8FF;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical,
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    background-color: transparent;
+    height: 8px;
+    margin: 0 2px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: #252525;
+    min-width: 26px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: #52A8FF;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal,
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+    width: 0px;
+}
+
+/* --------------------------------------------------------------------------
+   Dialog Button Box (OK / Cancel)
+   -------------------------------------------------------------------------- */
+QDialogButtonBox {
+    dialogbuttonbox-buttons-have-icons: 0;
+}
+
+QDialogButtonBox QPushButton {
+    font-family: "Inter", "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 6px;
+    min-width: 86px;
+    min-height: 28px;
+    padding: 4px 18px;
+    outline: none;
+}
+
+/* Primary OK button */
+QDialogButtonBox QPushButton:default {
+    background-color: #FFFFFF;
+    color: #121212;
+    border: 1px solid #FFFFFF;
+}
+
+QDialogButtonBox QPushButton:default:hover {
+    background-color: #E6E6E6;
+    border-color: #E6E6E6;
+}
+
+QDialogButtonBox QPushButton:default:pressed {
+    background-color: #D4D4D4;
+    border-color: #D4D4D4;
+}
+
+/* Secondary Cancel button */
+QDialogButtonBox QPushButton:!default {
+    background-color: #121212;
+    color: #EDEDED;
+    border: 1px solid #252525;
+}
+
+QDialogButtonBox QPushButton:!default:hover {
+    background-color: #1F1F1F;
+    border-color: #52A8FF;
+    color: #FFFFFF;
+}
+
+QDialogButtonBox QPushButton:!default:pressed {
+    background-color: #262626;
+}
+
+/* ToolTip */
+QToolTip {
+    background-color: #0A0A0A;
+    color: #EDEDED;
+    border: 1px solid #252525;
+    border-radius: 6px;
+    padding: 6px 8px;
+    font-size: 12px;
+}
