@@ -6,6 +6,10 @@ DolphinXVDO/unins000.exe
 DolphinXVDO/unins000.dat
 scratch/
 
+# Local AI agent rules (keep local, do not push)
+.agents/
+GEMINI.md
+
 # Dependencies, logs, env & OS clutter
 node_modules/
 *.log
